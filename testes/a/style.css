@@ -1,0 +1,55 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html {
+   width: 100vw;
+   height: 100vh;
+}
+body {
+   width: 100%;
+   min-height: 100vh;
+}
+#container {
+   width: 100%;
+   height: 100%;
+}
+#custom-container>input {
+   all: unset;
+}
+#nav-custom {
+   display: flex;
+   gap: 1%;
+   width: 100%;
+   height: 15vh;
+   background-color: rgb(190, 190, 190);
+}
+:has(#cabelo:checked) #cabelo-label{
+   background-color: rgb(147, 147, 147);
+}
+:has(#pele:checked) #pele-label{
+   background-color: rgb(147, 147, 147);
+}
+#nav-custom>label>img {
+   padding: 20%;
+   height: 100%;
+} 
+
+#hair-container {
+   display: none;
+   color: #fff;
+   background-color: rgb(147, 147, 147);
+}
+:has(#cabelo:checked) #hair-container {
+   display: block;
+}
+#skin-container {
+   display: none;
+   color: #fff;
+   background-color: rgb(147, 147, 147);
+}
+:has(#pele:checked) #skin-container {
+   display: block;
+}

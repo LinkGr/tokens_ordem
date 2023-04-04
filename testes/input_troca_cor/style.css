@@ -1,0 +1,96 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   width: 100%;
+   height: 100vh;
+}
+
+
+header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8%;
+   height: 15%;
+
+   background-color: #666666;
+}
+
+#slider {
+   width: 20%;
+}
+#slider>input::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   appearance: none;
+   width: 25px;
+   height: 25px;
+   background: #ffffff;
+   border-radius: 5vw;
+   cursor: pointer;
+ }
+#slider>input {
+   box-shadow: none;
+
+   -webkit-appearance: none;  /* Override default CSS styles */
+   appearance: none;
+   width: 100%; /* Full-width */
+   height: 15px; /* Specified height */
+   border-radius: 50vw;
+   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);; /* Grey background */
+   outline: none; /* Remove outline */
+   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+   transition: opacity .2s;
+}
+
+#troca-camisa {
+   padding: 0.5%;
+   display: flex;
+   justify-content: center;
+   gap: 5%;
+   height: 100%;
+   width: 20%;
+   background-color: #444444;
+}
+#troca-camisa>input {
+   display: none;
+}
+#troca-camisa>label {
+   display: flex;
+   justify-content: center;
+   height: 100%;
+   aspect-ratio: 1/1;
+   border-radius: 2vw;
+   border: 1px solid;
+   background-color: #555555;
+   transition: 250ms;
+}
+#troca-camisa>label:hover {
+   background-color: #666666;
+}
+#troca-camisa>input:checked+label {
+   background-color: #888888;
+}
+#troca-camisa>label>img {
+   height: 100%;
+   transform: scale(1.9);
+}
+
+
+main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 85%;
+   background-color: #888888;
+}
+
+main>img {
+   height: 80%;
+   aspect-ratio: 2/3;
+
+   
+}

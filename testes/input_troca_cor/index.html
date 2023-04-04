@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Slider de Troca de cor</title>
+
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body onload="trocarCor()">
+
+   <header>
+
+      <section id="slider">
+         <input type="range" onmousemove="trocarCor();"  min="0" max="360" id="cor-camisa" name="cor-da-camisa" value="0"/>
+      </section>
+
+      <section id="troca-camisa">
+         <input type="radio" id="camisa-1" name="camisa" checked onclick="trocaCamisa()">
+         <label for="camisa-1"><img src="../src/images/custom-modelos/camisa/camisa-balu-1.png" alt=""></label>
+         <input type="radio" id="camisa-2" name="camisa" onclick="trocaCamisa()">
+         <label for="camisa-2"><img src="../src/images/custom-modelos/camisa/camisa-policial.png" alt=""></label>
+      </section>
+
+      <button onclick="canva_draw();">Draw</button>
+      <button onclick="download_img();">Download</button>
+
+   </header>
+
+   <main>
+      <img src="../src/images/custom-modelos/camisa/camisa-balu-1.png" alt="">
+      <canvas width="200" height="300"></canvas>
+   </main>
+
+   <script src="./script.js"></script>
+</body>
+</html>

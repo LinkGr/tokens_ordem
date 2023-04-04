@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Estudo de Canvas</title>
+
+      <link rel="stylesheet" href="style.css" id="ednaldo">
+   </head>
+   <body>
+      <header>
+         <input type="radio" name="background" id="back-1" checked>
+         <label for="back-1"><img src="./src/background-1.png" alt=""></label>
+         <input type="radio" name="background" id="back-2">
+         <label for="back-2"><img src="./src/background-2.png" alt=""></label>
+         <button onclick="backChange()">Aperta ae</button>
+      </header>
+
+      <main>
+         <section >
+            <img src="" id="back-final" alt="">
+            <img src="./src/ednaldo.png" id="ednaldo-final" alt="">
+         </section>
+
+         <canvas width="500" height="500" id="myCanvas">
+            
+         </canvas>
+         <button onclick="MyCanvas()">Aperta ae</button>
+      </main>
+
+      <script src="./script.js"></script>
+   </body>
+</html>

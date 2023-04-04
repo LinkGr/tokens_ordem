@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Estudo de Canvas</title>
+
+   <link rel="stylesheet" href="style.css" id="ednaldo">
+</head>
+<body onload="changeCamisa()">
+   <header>
+      <img src="../src/images/custom-modelos/corpo/masc/masc-1.png" id="corpo" alt="">
+
+      <section id="camisas">
+         <input type="radio" id="camisa-input-1" name="camisa-selector" checked onchange="changeCamisa()">
+         <label for="camisa-input-1">
+            <img src="../src/images/custom-modelos/camisa/camisa-policial.png" dragabble="false" alt="">
+         </label>
+
+         <input type="radio" id="camisa-input-2" name="camisa-selector" onchange="changeCamisa()">
+         <label for="camisa-input-2">
+            <img src="../src/images/custom-modelos/camisa/camisa-balu-1.png" draggable="false" alt="">
+         </label>
+      </section>
+   </header>
+
+   <main>
+      <section id="preview">
+         <img src="../src/images/custom-modelos/corpo/masc/masc-1.png" id="corpo-preview" alt="">
+         <img src="" id="camisa-preview" alt="">
+      </section>
+      <button onclick="MyCanvas()">Download</button>
+   
+   </main>
+
+   <!--Repare que eu setei a altura e largura no proprio canvas e isso
+      é proposital pois se não ele não pega a altura e largura
+      (está em pixels mesmo sem o px na medida)-->
+      <canvas width="500" height="750" id="myCanvas"></canvas>
+
+   <script src="script.js">
+      
+   </script>
+</body>
+</html>
