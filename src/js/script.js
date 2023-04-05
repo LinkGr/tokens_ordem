@@ -118,6 +118,8 @@ function previewChanger() {
 
 function canvaDraw() {
 
+   ctx.clearRect(0, 0, 500, 750);
+
    //CANVAS CORPO
    ctx.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_corpo).replace('y', brilho_corpo).replace('z', saturacao_corpo);
    ctx.drawImage(preview_corpo, 0, 0);
@@ -126,11 +128,6 @@ function canvaDraw() {
    //CANVAS OLHOS
    ctx.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_olhos).replace('y', brilho_olhos).replace('z', saturacao_olhos);
    ctx.drawImage(preview_olhos, 0, 0);
-   ctx.filter = 'none';
-
-   //CANVAS CABELO
-   ctx.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_cabelo).replace('y', brilho_cabelo).replace('z', saturacao_cabelo);
-   ctx.drawImage(preview_cabelo, 0, 0);
    ctx.filter = 'none';
 
    //CANVAS BARBA
@@ -151,6 +148,11 @@ function canvaDraw() {
    //CANVAS TENIS
    ctx.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_tenis).replace('y', brilho_tenis).replace('z', saturacao_tenis);
    ctx.drawImage(preview_tenis, 0, 0);
+   ctx.filter = 'none';
+
+   //CANVAS CABELO
+   ctx.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_cabelo).replace('y', brilho_cabelo).replace('z', saturacao_cabelo);
+   ctx.drawImage(preview_cabelo, 0, 0);
    ctx.filter = 'none';
    
 }

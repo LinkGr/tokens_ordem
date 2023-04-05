@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: 250ms;
 }
 
 :root {
@@ -16,6 +17,9 @@
   --item-default-color: #777777;
   --item-hover-color: #888888;
   --item-active-color: #999999;
+}
+:has(#tema:checked):root {
+  --bg-color: #eee;
 }
 
 /*Elementos Iniciais*/
@@ -39,6 +43,8 @@ body {
 header {
   /*---Tamanho, posição e alinhamento---*/
   /*display: none;*/
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 14%;
 
@@ -77,8 +83,10 @@ main {
 #container {
   /*---Tamanho, posição e alinhamento---*/
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 90%;
-  height: 98%;
+  height: 90%;
   border-radius: 1vw;
   overflow: hidden;
 }
@@ -95,13 +103,12 @@ main {
   overflow: hidden;
 
   /*---Estilização---*/
-  background-color: var(--editor-background);
 }
 #preview-container > img {
   /*---Tamanho, posição e alinhamento---*/
   position: absolute;
-  height: auto;
-  width: 95%;
+  height: 85%;
+  width: auto;
   object-fit: cover;
 }
 #preview-container > button {
@@ -135,7 +142,7 @@ main {
 /*-------------CUSTOMIZAÇÃO-------------*/
 #custom-container {
   /*---Tamanho, posição e alinhamento---*/
-  width: 73%;
+  width: 53%;
   height: 100%;
 
   /*---Estilização---*/
@@ -152,7 +159,6 @@ main {
   border-bottom: 1px solid;
 
   /*---Estilização---*/
-  background-color: var(--editor-background);
 }
 
 /*input*/
