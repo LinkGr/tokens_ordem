@@ -8,15 +8,16 @@
 :root {
   --bg-color: #111111;
   --header-color: #222222;
+  
   --editor-background: #333333;
 
-  --tab-default-color: #444444;
-  --tab-hover-color: #555555;
-  --tab-active-color: #666666;
+  --tab-default-color: #555;
+  --tab-hover-color: #666;
+  --tab-active-color: #777;
 
-  --item-default-color: #777777;
-  --item-hover-color: #888888;
-  --item-active-color: #999999;
+  --item-default-color: #888;
+  --item-hover-color: #999;
+  --item-active-color: #aaa;
 }
 :has(#tema:checked):root {
   --bg-color: #eee;
