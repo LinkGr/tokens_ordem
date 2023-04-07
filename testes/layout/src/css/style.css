@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #888888;
+}
+
+:root {
+  --bg-color: #111111;
+  --header-color: #222222;
+
+  --editor-background: #333333;
+
+  --tab-default-color: #555;
+  --tab-hover-color: #666;
+  --tab-active-color: #777;
+
+  --item-default-color: #888;
+  --item-hover-color: #999;
+  --item-active-color: #aaa;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 2rem;
+}
+body * {
+  color: #eeeeee;
+}
+
+/*Banner*/
+header {
+  width: 100%;
+  height: 10%;
+
+  background-color: var(--header-color);
+}
+
+/*Conteudo*/
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  padding: 0% 2% 0% 2%;
+
+  gap: 2%;
+
+  background-color: var(--bg-color);
+}
+/*Preview*/
+#preview {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  max-width: 262px;
+  width: 100%;
+  height: 88%;
+
+  background-color: var(--editor-background);
+}
+#preview > section {
+  width: 100%;
+  height: 90%;
+
+  background-color: #555;
+}
+#preview > button {
+  width: 100%;
+  max-width: 50%;
+  padding: 2%;
+  border-radius: 50vw;
+  color: #111111;
+  border: 2px solid #111111;
+}
+
+/*Customização*/
+#custom {
+  max-width: 746px;
+  width: 100%;
+  height: 88%;
+}
+/*Tabs*/
+#tabs-itens {
+  display: flex;
+  width: 100%;
+  height: 11%;
+  gap: 1%;
+}
+#tabs-itens input {
+  display: none;
+}
+#tabs-itens label /*Tab default*/ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 7);
+  height: 100%;
+  transition: 250ms;
+
+  background-color: var(--tab-default-color);
+  border-radius: 1vw 1vw 0vw 0vw;
+  border: 1px solid black;
+  border-bottom: 0;
+}
+#tabs-itens label:hover /*Tab hover*/ {
+  background-color: var(--tab-hover-color);
+}
+#tabs-itens input:checked+label /*Tab Checkeda*/ {
+  background-color: var(--tab-active-color);
+}
+#tabs-itens label img /*Imagem*/ {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#tabs-itens label img[src=""] /*Se a imagem não tiver um src*/ {
+  display: none;
+}
+#tabs-itens label p /*Texto para quando n tiver src desativado por padrão*/ {
+  display: none;
+}
+#tabs-itens label img[src=""] + p /*Se a imagem não tiver um src o texto padrão aparece*/ {
+  display: block;
+}
+
+/*Paginas*/
+#paginas-itens /*Container*/ {
+  display: flex;
+  width: 100%;
+  height: 89%;
+
+  background-color: #841818;
+}
+
+/*Paginas*/
+#paginas-itens>div /*Default*/ {
+  display: none;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  gap: 2%;
+  padding: 3%;
+
+  background-color: var(--tab-active-color);
+}
+/*Input Checked*/
+:has(#tab-corpo:checked) #pagina-corpo,
+:has(#tab-olhos:checked) #pagina-olhos,
+:has(#tab-cabelo:checked) #pagina-cabelo,
+:has(#tab-barba:checked) #pagina-barba,
+:has(#tab-camisa:checked) #pagina-camisa,
+:has(#tab-calca:checked) #pagina-calca,
+:has(#tab-tenis:checked) #pagina-tenis {
+  display: grid;
+}
+/*Input*/
+#paginas-itens > div > input {
+  display: none;
+}
+/*Label*/
+#paginas-itens>div>label /*Default*/ {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+
+  background-color: var(--item-default-color);
+  border: 1px solid;
+  border-radius: 1vw;
+  transition: 250ms;
+}
+#paginas-itens>div>label:hover /*Hover*/ {
+  background-color: var(--item-hover-color);
+}
+#paginas-itens>div>input:checked + label /*Checked*/ {
+  background-color: var(--item-active-color);
+}
+#paginas-itens>div>label>img /*Label img*/ {
+  position: absolute;
+  aspect-ratio: 1/1;
+  max-width: 1fr;
+  width: 100%;
+
+  object-fit: contain;
+}
+#paginas-itens>div>label>img[src=""] /*Se a imagem do src não tiver src*/ {
+  display: none;
+}
+
+/*Personalizando cada Categoria*/
+#pagina-corpo label img {
+}
+#pagina-olhos label img {
+}
+#pagina-cabelo label img {
+  top: 45%;
+  left: 5%;
+  scale: 1.8;
+}
+#pagina-barba label img {
+}
+#pagina-camisa label img {
+  bottom: 0;
+  scale: 1.6;
+}
+#pagina-calca label img {
+  bottom: 73%;
+  scale: 2.8;
+}
+#pagina-tenis label img {
+  bottom: 190%;
+  scale: 4.8;
+}

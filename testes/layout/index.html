@@ -1,70 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Teste Layout</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Layout</title>
 
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <header>BANNER</header>
-   <main>
-
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <header>BANNER</header>
+    <main>
       <!--Preview-->
       <aside id="preview">
-         <section>PREVIEW</section>
+        <section>PREVIEW</section>
 
-         <button type="button">Download</button>
+        <button type="button">Download</button>
       </aside>
 
       <!--Custom-->
       <section id="custom">
+        <!--Tabs-->
+        <nav id="tabs-itens">
+          <input type="radio" id="tab-corpo" name="tab" checked />
+          <label for="tab-corpo"
+            ><img src="" alt="" />
+            <p>Corpo</p></label
+          >
+          <input type="radio" id="tab-olhos" name="tab" />
+          <label for="tab-olhos"
+            ><img src="" alt="" />
+            <p>Olhos</p></label
+          >
+          <input type="radio" id="tab-cabelo" name="tab" />
+          <label for="tab-cabelo"
+            ><img src="" alt="" />
+            <p>Cabelo</p></label
+          >
+          <input type="radio" id="tab-barba" name="tab" />
+          <label for="tab-barba"
+            ><img src="" alt="" />
+            <p>Barba</p></label
+          >
+          <input type="radio" id="tab-camisa" name="tab" />
+          <label for="tab-camisa"
+            ><img src="" alt="" />
+            <p>Camisa</p></label
+          >
+          <input type="radio" id="tab-calca" name="tab" />
+          <label for="tab-calca"
+            ><img src="" alt="" />
+            <p>Calca</p></label
+          >
+          <input type="radio" id="tab-tenis" name="tab" />
+          <label for="tab-tenis"
+            ><img src="" alt="" />
+            <p>Tenis</p></label
+          >
+        </nav>
 
-         <!--Tabs-->
-         <nav id="tabs-itens">
-            <input type="radio" id="tab-corpo" name="tab" checked>
-            <label for="tab-corpo"><img src="" alt=""><p>Corpo</p></label>
-            <input type="radio" id="tab-olhos" name="tab">
-            <label for="tab-olhos"><img src="" alt=""><p>Olhos</p></label>
-            <input type="radio" id="tab-camisa" name="tab">
-            <label for="tab-camisa"><img src="" alt=""><p>Cabelo</p></label>
-            <input type="radio" id="tab-calca" name="tab">
-            <label for="tab-calca"><img src="" alt=""><p>Barba</p></label>
-            <input type="radio" id="tab-tenis" name="tab">
-            <label for="tab-tenis"><img src="" alt=""><p>Camisa</p></label>
-            <input type="radio" id="tab-cabelo" name="tab">
-            <label for="tab-cabelo"><img src="" alt=""><p>Calca</p></label>
-            <input type="radio" id="tab-barba" name="tab">
-            <label for="tab-barba"><img src="" alt=""><p>Tenis</p></label>
-         </nav>
+        <!--Paginas-->
+        <section id="paginas-itens">
+          <div id="pagina-corpo">
+            <input type="radio" name="corpo-item" id="corpo-1" checked />
+            <label for="corpo-1"
+              ><img
+                src="./src/images/custom-modelos/corpo/masc/masc-1.png"
+                alt=""
+            /></label>
 
-         <!--Paginas-->
-         <section id="paginas-itens">
-            <div id="pagina-corpo">
-            </div>
-            <div id="pagina-olhos">
-            </div>
-            <div id="pagina-cabelo">
+            <input type="radio" name="corpo-item" id="corpo-2" />
+            <label for="corpo-2"><img src="" alt="" /></label>
 
-            </div>
-            <div id="pagina-barba">
+            <input type="radio" name="corpo-item" id="corpo-3" />
+            <label for="corpo-3"><img src="" alt="" /></label>
 
-            </div>
-            <div id="pagina-camisa">
+            <input type="radio" name="corpo-item" id="corpo-4" />
+            <label for="corpo-4"><img src="" alt="" /></label>
 
-            </div>
-            <div id="pagina-calca">
+            <input type="radio" name="corpo-item" id="corpo-5" />
+            <label for="corpo-5"><img src="" alt="" /></label>
+          </div>
 
-            </div>
-            <div id="pagina-tenis">
+          <div id="pagina-olhos">
+            <input type="radio" name="olhos-item" id="olhos-1" checked />
+            <label for="olhos-1"><img src="" alt="" /></label>
 
-            </div>
+            <input type="radio" name="olhos-item" id="olhos-2" />
+            <label for="olhos-2"><img src="" alt="" /></label>
 
-         </section>
+            <input type="radio" name="olhos-item" id="olhos-3" />
+            <label for="olhos-3"><img src="" alt="" /></label>
 
+            <input type="radio" name="olhos-item" id="olhos-4" />
+            <label for="olhos-4"><img src="" alt="" /></label>
+
+            <input type="radio" name="olhos-item" id="olhos-5" />
+            <label for="olhos-5"><img src="" alt="" /></label>
+          </div>
+
+          <div id="pagina-cabelo">
+            <input type="radio" name="cabelo-item" id="cabelo-1" checked />
+            <label for="cabelo-1"
+              ><img
+                src="./src/images/custom-modelos/cabelos/cabelo-balu.png"
+                alt=""
+            /></label>
+
+            <input type="radio" name="cabelo-item" id="cabelo-2" />
+            <label for="cabelo-2"
+              ><img
+                src="./src/images/custom-modelos/cabelos/cabelo-dante.png"
+                alt=""
+            /></label>
+
+            <input type="radio" name="cabelo-item" id="cabelo-3" />
+            <label for="cabelo-3"
+              ><img
+                src="./src/images/custom-modelos/cabelos/cabelo-joui.png"
+                alt=""
+            /></label>
+
+            <input type="radio" name="cabelo-item" id="cabelo-4" />
+            <label for="cabelo-4"
+              ><img
+                src="./src/images/custom-modelos/cabelos/cabelo-kaiser-2.png"
+                alt=""
+            /></label>
+
+            <input type="radio" name="cabelo-item" id="cabelo-5" />
+            <label for="cabelo-5"
+              ><img
+                src="./src/images/custom-modelos/cabelos/cabelo-kurt.png"
+                alt=""
+            /></label>
+          </div>
+
+          <div id="pagina-barba">
+            <input type="radio" name="barba-item" id="barba-1" checked />
+            <label for="barba-1"><img src="" alt="" /></label>
+
+            <input type="radio" name="barba-item" id="barba-2" />
+            <label for="barba-2"><img src="" alt="" /></label>
+
+            <input type="radio" name="barba-item" id="barba-3" />
+            <label for="barba-3"><img src="" alt="" /></label>
+
+            <input type="radio" name="barba-item" id="barba-4" />
+            <label for="barba-4"><img src="" alt="" /></label>
+
+            <input type="radio" name="barba-item" id="barba-5" />
+            <label for="barba-5"><img src="" alt="" /></label>
+          </div>
+
+          <div id="pagina-camisa">
+            <input type="radio" name="camisa-item" id="camisa-1" checked />
+            <label for="camisa-1"
+              ><img
+                src="./src/images/custom-modelos/camisa/camisa-balu-1.png"
+                alt=""
+            /></label>
+
+            <input type="radio" name="camisa-item" id="camisa-2" />
+            <label for="camisa-2"
+              ><img
+                src="./src/images/custom-modelos/camisa/camisa-policial.png"
+                alt=""
+            /></label>
+
+            <input type="radio" name="camisa-item" id="camisa-3" />
+            <label for="camisa-3"><img src="" alt="" /></label>
+
+            <input type="radio" name="camisa-item" id="camisa-4" />
+            <label for="camisa-4"><img src="" alt="" /></label>
+
+            <input type="radio" name="camisa-item" id="camisa-5" />
+            <label for="camisa-5"><img src="" alt="" /></label>
+          </div>
+
+          <div id="pagina-calca">
+            <input type="radio" name="calca-item" id="calca-1" checked />
+            <label for="calca-1"
+              ><img
+                src="./src/images/custom-modelos/calca/calca-balu.png"
+                alt=""
+            /></label>
+
+            <input type="radio" name="calca-item" id="calca-2" />
+            <label for="calca-2"
+              ><img
+                src="./src/images/custom-modelos/calca/calca-policial.png"
+                alt=""
+            /></label>
+
+            <input type="radio" name="calca-item" id="calca-3" />
+            <label for="calca-3"><img src="" alt="" /></label>
+
+            <input type="radio" name="calca-item" id="calca-4" />
+            <label for="calca-4"><img src="" alt="" /></label>
+
+            <input type="radio" name="calca-item" id="calca-5" />
+            <label for="calca-5"><img src="" alt="" /></label>
+          </div>
+
+          <div id="pagina-tenis">
+            <input type="radio" name="tenis-item" id="tenis-1" checked />
+            <label for="tenis-1"
+              ><img
+                src="./src/images/custom-modelos/tenis/tenis-balu.png"
+                alt=""
+            /></label>
+
+            <input type="radio" name="tenis-item" id="tenis-2" />
+            <label for="tenis-2"
+              ><img
+                src="./src/images/custom-modelos/tenis/tenis-policial.png"
+                alt=""
+            /></label>
+
+            <input type="radio" name="tenis-item" id="tenis-3" />
+            <label for="tenis-3"><img src="" alt="" /></label>
+
+            <input type="radio" name="tenis-item" id="tenis-4" />
+            <label for="tenis-4"><img src="" alt="" /></label>
+
+            <input type="radio" name="tenis-item" id="tenis-5" />
+            <label for="tenis-5"><img src="" alt="" /></label>
+          </div>
+        </section>
       </section>
-   </main>
-</body>
+    </main>
+  </body>
 </html>
