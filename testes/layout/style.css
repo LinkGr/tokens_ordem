@@ -32,6 +32,7 @@ body * {
    color: #eeeeee;
 }
 
+/*Banner*/
 header {
    width: 100%;
    height: 10%;
@@ -39,6 +40,8 @@ header {
    background-color: var(--header-color);
 }
 
+
+/*Conteudo*/
 main {
    display: flex;
    justify-content: space-between;
@@ -51,7 +54,7 @@ main {
 
    background-color: var(--bg-color);
 }
-
+/*Preview*/
 #preview {
    display: flex;
    justify-content: space-evenly;
@@ -78,11 +81,77 @@ main {
    border: 2px solid #111111;
 }
 
-
+/*Customização*/
 #custom {
    max-width: 746px;
    width: 100%;
    height: 88%;
 
-   background-color: var(--editor-background);
 }
+/*Tabs*/
+#tabs-itens {
+   display: flex;
+   width: 100%;
+   height: 11%;
+   gap: 1%;
+}
+#tabs-itens input {
+   display: none;
+}
+#tabs-itens label /*Tab default*/ {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: calc(100%/7);
+   height: 100%;
+   transition: 250ms;
+
+   background-color: var(--tab-default-color);
+   border-radius: 1vw 1vw 0vw 0vw;
+   border: 1px solid black;
+}
+#tabs-itens label:hover /*Tab hover*/ {
+   background-color: var(--tab-hover-color);
+}
+#tabs-itens input:checked+label /*Tab Checkeda*/ {
+   background-color: var(--tab-hover-color);
+}
+#tabs-itens label img /*Imagem*/{
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+#tabs-itens label img[src=""] /*Se a imagem não tiver um src*/ {
+   display: none;
+}
+#tabs-itens label p /*Texto para quando n tiver src desativado por padrão*/ {
+   display: none;
+}
+#tabs-itens label img[src=""] + p /*Se a imagem não tiver um src o texto padrão aparece*/ {
+   display: block;
+}
+
+
+
+/*Paginas*/
+#paginas-itens /*Container*/ {
+   display: flex;
+   width: 100%;
+   height: 89%;
+
+   background-color: #841818;
+}
+#paginas-itens div /*Cada Pagina*/ {
+   display: none;
+   width: 100%;
+   height: 100%;
+
+   background-color: var(--tab-active-color);
+}
+:has(#tab-corpo:checked) #pagina-corpo,
+:has(#tab-olhos:checked) #pagina-olhos,
+:has(#tab-cabelo:checked) #pagina-cabelo,
+:has(#tab-barba:checked) #pagina-barba,
+:has(#tab-camisa:checked) #pagina-camisa,
+:has(#tab-calca:checked) #pagina-calca,
+:has(#tab-tenis:checked) #pagina-tenis {display: flex;}
