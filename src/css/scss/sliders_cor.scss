@@ -1,0 +1,91 @@
+/*--------SLIDER DE COR------*/
+.slider-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    color: #eeeeee;
+    
+    background-color: #444444;
+
+    > section {
+        > p {
+            margin-bottom: 5%;
+        }
+
+        > input[min="0"][max="360"] {
+            box-shadow: none;
+          
+             -webkit-appearance: none;
+             appearance: none;
+             width: 100%;
+             height: 8px;
+             border-radius: 50vw;
+             background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+             outline: none; 
+             -webkit-transition: .2s;
+             transition: opacity .2s;
+
+             ::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 12%;
+                aspect-ratio: 1/1;
+                background: #ffffff;
+                border-radius: 5vw;
+                cursor: pointer;
+            }
+        }
+
+        > input[min="0"][max="100"] {
+            box-shadow: none;
+          
+             -webkit-appearance: none;
+             appearance: none;
+             width: 100%;
+             height: 8px;
+             border-radius: 50vw;
+             background: linear-gradient(90deg, rgb(25, 25, 25), rgb(190, 190, 190));
+             outline: none; 
+             -webkit-transition: .2s;
+             transition: opacity .2s;
+
+             ::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 12%;
+                aspect-ratio: 1/1;
+                background: #ffffff;
+                border-radius: 5vw;
+                cursor: pointer;
+              }
+        }
+
+        > input[min="0"][max="3"] {
+            box-shadow: none;
+          
+             -webkit-appearance: none;
+             appearance: none;
+             width: 100%;
+             height: 8px;
+             border-radius: 50vw;
+             background: linear-gradient(90deg, rgb(137, 137, 137), rgb(135, 66, 66), rgb(135, 0, 0));
+             outline: none; 
+             -webkit-transition: .2s;
+             transition: opacity .2s;
+
+             ::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 12%;
+                aspect-ratio: 1/1;
+                background: #ffffff;
+                border-radius: 5vw;
+                cursor: pointer;
+              }
+        }
+    }
+  }

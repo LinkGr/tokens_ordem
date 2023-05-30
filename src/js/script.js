@@ -1,6 +1,7 @@
 //Declarando Variaveis -------------------
 //CUSTOM SELECTED
 let selected_corpo = document.querySelector("#pagina-corpo>.opcoes-custom>input:checked+label>img");
+let selected_cabeca = document.querySelector("#pagina-cabeca>.opcoes-custom>input:checked+label>img");
 let selected_olhos = document.querySelector("#pagina-olhos>.opcoes-custom>input:checked+label>img");
 let selected_cabelo = document.querySelector("#pagina-cabelo>.opcoes-custom>input:checked+label>img");
 let selected_barba = document.querySelector("#pagina-barba>.opcoes-custom>input:checked+label>img");
@@ -17,6 +18,9 @@ let preview_corpo = document.querySelector("#preview-corpo");
 let hue_corpo = document.querySelector("#hue-corpo");
 let brilho_corpo = document.querySelector("#hue-corpo");
 let saturacao_corpo = document.querySelector("#saturacao-corpo");
+
+//CABECA
+let preview_cabeca = document.querySelector("#preview-cabeca");
 
 //OLHOS
 let preview_olhos = document.querySelector("#preview-olhos");
@@ -54,6 +58,7 @@ let hue_tenis = document.querySelector("#hue-tenis");
 let brilho_tenis = document.querySelector("#hue-tenis");
 let saturacao_tenis = document.querySelector("#saturacao-tenis");
 
+
 function colorChanger() {
    hue_corpo = document.querySelector("#hue-corpo").value;
    brilho_corpo = document.querySelector("#brilho-corpo").value;
@@ -88,6 +93,7 @@ function colorChanger() {
 function previewChanger() {
 
    selected_corpo = document.querySelector("#pagina-corpo>.opcoes-custom>input:checked+label>img");
+   selected_cabeca = document.querySelector("#pagina-cabeca>.opcoes-custom>input:checked+label>img");
    selected_olhos = document.querySelector("#pagina-olhos>.opcoes-custom>input:checked+label>img");
    selected_cabelo = document.querySelector("#pagina-cabelo>.opcoes-custom>input:checked+label>img");
    selected_barba = document.querySelector("#pagina-barba>.opcoes-custom>input:checked+label>img");
@@ -98,6 +104,7 @@ function previewChanger() {
    colorChanger();
 
    preview_corpo.style.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_corpo).replace('y', brilho_corpo).replace('z', saturacao_corpo);
+   preview_cabeca.style.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_corpo).replace('y', brilho_corpo).replace('z', saturacao_corpo);
    preview_olhos.style.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_olhos).replace('y', brilho_olhos).replace('z', saturacao_olhos);
    preview_cabelo.style.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_cabelo).replace('y', brilho_cabelo).replace('z', saturacao_cabelo);
    preview_barba.style.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_barba).replace('y', brilho_barba).replace('z', saturacao_barba);
@@ -105,13 +112,30 @@ function previewChanger() {
    preview_calca.style.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_calca).replace('y', brilho_calca).replace('z', saturacao_calca);
    preview_tenis.style.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_tenis).replace('y', brilho_tenis).replace('z', saturacao_tenis);
    
-   preview_corpo.setAttribute('src', selected_corpo.getAttribute('src'));
-   preview_olhos.setAttribute('src', selected_olhos.getAttribute('src'));
-   preview_cabelo.setAttribute('src', selected_cabelo.getAttribute('src'));
-   preview_barba.setAttribute('src', selected_barba.getAttribute('src'));
-   preview_camisa.setAttribute('src', selected_camisa.getAttribute('src'));
-   preview_calca.setAttribute('src', selected_calca.getAttribute('src'));
-   preview_tenis.setAttribute('src', selected_tenis.getAttribute('src'));
+   if (selected_corpo != null) {
+      preview_corpo.setAttribute('src', selected_corpo.getAttribute('src'));
+   }
+   if (selected_cabeca != null) {
+      preview_cabeca.setAttribute('src', selected_cabeca.getAttribute('src'));
+   }
+   if (selected_olhos != null) {
+      preview_olhos.setAttribute('src', selected_olhos.getAttribute('src'));
+   }
+   if (selected_cabelo != null) {
+      preview_cabelo.setAttribute('src', selected_cabelo.getAttribute('src'));
+   }
+   if (selected_barba != null) {
+      preview_barba.setAttribute('src', selected_barba.getAttribute('src'));
+   }
+   if (selected_camisa != null) {
+      preview_camisa.setAttribute('src', selected_camisa.getAttribute('src'));
+   }
+   if (selected_calca != null) {
+      preview_calca.setAttribute('src', selected_calca.getAttribute('src'));
+   }
+   if (selected_tenis != null) {
+      preview_tenis.setAttribute('src', selected_tenis.getAttribute('src'));
+   }
 
    canvaDraw();
 }
@@ -123,6 +147,11 @@ function canvaDraw() {
    //CANVAS CORPO
    ctx.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_corpo).replace('y', brilho_corpo).replace('z', saturacao_corpo);
    ctx.drawImage(preview_corpo, 0, 0);
+   ctx.filter = 'none';
+
+   //CANVAS CABECA
+   ctx.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_corpo).replace('y', brilho_corpo).replace('z', saturacao_corpo);
+   ctx.drawImage(preview_cabeca, 0, 0);
    ctx.filter = 'none';
 
    //CANVAS OLHOS
@@ -140,14 +169,14 @@ function canvaDraw() {
    ctx.drawImage(preview_camisa, 0, 0);
    ctx.filter = 'none';
 
-   //CANVAS CALCA
-   ctx.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_calca).replace('y', brilho_calca).replace('z', saturacao_calca);
-   ctx.drawImage(preview_calca, 0, 0);
-   ctx.filter = 'none';
-
    //CANVAS TENIS
    ctx.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_tenis).replace('y', brilho_tenis).replace('z', saturacao_tenis);
    ctx.drawImage(preview_tenis, 0, 0);
+   ctx.filter = 'none';
+
+   //CANVAS CALCA
+   ctx.filter = 'hue-rotate(xdeg) brightness(y%) saturate(z)'.replace('x', hue_calca).replace('y', brilho_calca).replace('z', saturacao_calca);
+   ctx.drawImage(preview_calca, 0, 0);
    ctx.filter = 'none';
 
    //CANVAS CABELO

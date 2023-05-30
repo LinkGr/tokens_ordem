@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 250ms;
+
+  font-family: 'Special Elite', cursive;
+}
+
+:root {
+    --bg-color: #111111;
+    --header-color: #222222;
+    
+    --editor-background: #333333;
+  
+    --tab-default-color: #555;
+    --tab-hover-color: #666;
+    --tab-active-color: #777;
+  
+    --item-default-color: #888;
+    --item-hover-color: #999;
+    --item-active-color: #aaa;
+}
+
+:has(#tema:checked):root {
+    --bg-color: #eee;
+}
+
+html {
+  /*---Tamanho, posição e alinhamento---*/
+  font-size: 1vw;
+  
+
+  /*---Estilização---*/
+}
+
+body {
+    /*---Tamanho, posição e alinhamento---*/
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+  
+    /*---Estilização---*/
+}
+
+
+/*-------------------MAIN--------------------*/
+main {
+    /*---Tamanho, posição e alinhamento---*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 86%;
+  
+    /*---Estilização---*/
+  }
+  
+  #container {
+    /*---Tamanho, posição e alinhamento---*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    border-radius: 1vw;
+    overflow: hidden;
+  }
+
+@import "./scss/header.scss";
+@import "./scss/preview.scss";
+
+/*-------------CUSTOMIZAÇÃO-------------*/
+#custom-container {
+    /*---Tamanho, posição e alinhamento---*/
+    display: flex;
+    
+    flex-direction: column;
+    width: 53%;
+    height: 100%;
+  
+    /*---Estilização---*/
+  }
+
+@import "./scss/tabs.scss";
+@import "./scss/paginas.scss";
+@import "./scss/opicoes.scss";
+@import "./scss/sliders_cor.scss";

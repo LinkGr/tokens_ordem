@@ -1,0 +1,47 @@
+/*-------------PREVIEW-------------*/
+#preview-container {
+    /*---Tamanho, posição e alinhamento---*/
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 27%;
+    height: 100%;
+    overflow: hidden;
+  
+    /*---Estilização---*/
+  }
+  #preview-container > img {
+    /*---Tamanho, posição e alinhamento---*/
+    position: absolute;
+    height: 85%;
+    width: auto;
+    object-fit: cover;
+  }
+  #preview-container > button {
+    /*---Tamanho, posição e alinhamento---*/
+    position: absolute;
+    bottom: 2%;
+    height: auto;
+    padding: 2% 8% 2% 8%;
+    border-radius: 9vw;
+    z-index: 3;
+    object-fit: cover;
+    transition: 250ms;
+  
+    /*Estilização*/
+    font-family: 'roboto';
+    font-weight: bold;
+    border: 1px solid #111111;
+    color: #ffffff;
+    background-color: #444;
+    cursor: pointer;
+  }
+  #preview-container > button:hover {
+    /*---Tamanho, posição e alinhamento---*/
+  
+    /*Estilização*/
+    border: 1px solid #111111;
+    background-color: #eeeeee;
+    color: #333333;
+  }

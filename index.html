@@ -25,13 +25,14 @@
       <!------ Preview ------>
       <section id="preview-container">
         <img src="" id="preview-corpo" alt="" />
+        <img src="" id="preview-cabeca" alt="" />
         <img src="" id="preview-olhos" alt="" />
         <img src="" id="preview-barba" alt="" />
         <img src="" id="preview-camisa" alt="" />
         <img src="" id="preview-tenis" alt="" />
         <img src="" id="preview-calca" alt="" />
         <img src="" id="preview-cabelo" alt="" />
-        <button onclick="downloadToken()">Download</button>
+        <button type="button" onclick="downloadToken()">Download</button>
       </section>
 
       <!------ Area de customização ------>
@@ -41,6 +42,11 @@
           <input type="radio" id="tab-corpo" name="tab" class="tab" checked />
           <label for="tab-corpo">
             <img src="./src/images/tab-icon/corpo.svg" alt="" />
+          </label>
+
+          <input type="radio" id="tab-cabeca" name="tab" class="tab" />
+          <label for="tab-cabeca">
+            <img src="./src/images/tab-icon/cabeca.svg" alt="" />
           </label>
 
           <input type="radio" id="tab-olhos" name="tab" class="tab" />
@@ -98,6 +104,12 @@
                 <input type="range" value="1" min="0" max="3" step=".1" name="saturacao-corpo" id="saturacao-corpo" />
               </section>
             </section>
+          </section>
+
+          <!--CABEÇA-->
+          <section id="pagina-cabeca">
+            <!--ITENS-->
+            <section class="opcoes-custom"></section>
           </section>
 
           <!--OLHOS-->

@@ -1,0 +1,69 @@
+/*Navegação das Tabs*/
+#tabs-paginas {
+    /*---Tamanho, posição e alinhamento---*/
+    display: flex;
+    align-items: flex-end;
+    
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    height: 14%;
+    border-bottom: 1px solid;
+  
+    /*---Estilização---*/
+
+    > label {
+        /*---Tamanho, posição e alinhamento---*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90%;
+        transition: 250ms;
+      
+        /*---Estilização---*/
+        border: 1px solid;
+        border-radius: 1vw;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 0;
+        background-color: var(--tab-default-color);
+
+        > img {
+          /*---Tamanho, posição e alinhamento---*/
+          height: 60%;
+          width: 100%;
+          object-fit: contain;
+          aspect-ratio: 1/1;
+        
+          /*---Estilização---*/
+        }
+        
+        &:hover {
+          /*---Estilização---*/
+          background-color: var(--tab-hover-color);
+          height: 96%;
+        }
+    }
+  }
+
+  
+  /*input*/
+  .tab {
+    display: none;
+  }
+
+  :is(
+    #tab-corpo,
+    #tab-cabeca,
+    #tab-olhos,
+    #tab-cabelo,
+    #tab-barba,
+    #tab-camisa,
+    #tab-calca,
+    #tab-tenis
+  ):checked
+  + label {
+  /*---Estilização---*/
+  background-color: var(--tab-active-color);
+  height: 100%;
+}

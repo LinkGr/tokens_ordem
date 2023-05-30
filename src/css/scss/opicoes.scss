@@ -1,0 +1,47 @@
+.opcoes-custom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1%;
+    gap: 2%;
+    width: 100%;
+    height: 85%;
+
+    > input {
+        display: none;
+
+        &:checked+label {
+            /*---Estilização---*/
+            background-color: var(--item-active-color);
+        }
+    }
+
+    > label {
+        /*---Tamanho, posição e alinhamento---*/
+        display: flex;
+        justify-content: center;
+        height: 30%;
+        aspect-ratio: 1/1;
+        border-radius: 2vw;
+        overflow: hidden;
+        transition: 250ms;
+      
+        /*---Estilização---*/
+        background-color: var(--item-default-color);
+        border: 1px solid;
+
+        > img {
+            height: 100%;
+            width: auto;
+            aspect-ratio: 2/3;
+            all: unset;
+            border: 0;
+          }
+        
+        &:hover {
+            background-color: var(--item-hover-color);
+        }
+      }
+  }
+  
+  
