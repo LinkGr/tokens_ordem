@@ -12,7 +12,7 @@ let img;
 
 //Quantidade de imagens
 let quantidade_corpos = 1;
-let quantidade_cabecas = 1;
+let quantidade_cabecas = 2;
 let quantidade_olhos = 0;
 let quantidade_cabelos = 5;
 let quantidade_barbas = 0;
